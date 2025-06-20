@@ -2,6 +2,6 @@ aiogram
 python-dotenv
 motor
 pymongo
-Flask==3.0.3
+Flask
 uvicorn
-pymongo
+aiogram-fsm-storage-mongodb
