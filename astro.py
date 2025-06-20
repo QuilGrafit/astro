@@ -63,7 +63,7 @@ if not MONGO_URI:
     raise ValueError("Environment variable MONGO_URI is not set.")
 
 # --- Инициализация бота и диспетчера ---
-bot = Bot(token=TOKEN, parse_mode=ParseMode.HTML)
+bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher(storage=MemoryStorage()) # Используем MemoryStorage
 
 # --- Соединение с MongoDB ---
