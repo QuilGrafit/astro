@@ -4,4 +4,4 @@ motor
 pymongo
 Flask==3.0.3
 uvicorn
-aiogram-fsm-storage-mongo
+aiogram-fsm-storage-mongodb
