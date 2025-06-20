@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/cron.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/webhook/(.*)",
+      "dest": "/api/index.py"
+    },
+    {
+      "src": "/send-horoscopes",
+      "dest": "/api/cron.py",
+      "methods": ["GET", "POST"]
+    }
+  ],
+  "env": {
+    "BOT_TOKEN": "@bot_token",
+    "TON_WALLET_ADDRESS": "@ton_wallet_address",
+    "MONGO_URI": "@mongo_uri",
+    "WEBHOOK_HOST": "YOUR_VERCEL_APP_DOMAIN",
+    "ADSGRAM_API_KEY": "@adsgram_api_key"
+  },
+  "crons": [
+    {
+      "path": "/send-horoscopes",
+      "schedule": "0 6 * * *"
+    }
+  ]
+}
