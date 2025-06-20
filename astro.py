@@ -38,7 +38,7 @@ if not MONGO_URI:
 
 # Webhook для Vercel
 WEBHOOK_HOST = os.getenv('WEBHOOK_HOST', None)
-WEBHOOK_PATH = f"/webhook/{TOKEN}"
+WEBHOOK_PATH = "/api/webhook"
 WEBHOOK_URL = f"https://{WEBHOOK_HOST}{WEBHOOK_PATH}" if WEBHOOK_HOST else None
 
 # Инициализация логирования
