@@ -4,4 +4,4 @@ motor
 pymongo
 Flask
 uvicorn
-aiogram-fsm-storage-mongodb
+MongoStorage
