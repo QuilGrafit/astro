@@ -28,6 +28,12 @@
     "WEBHOOK_HOST": "WEBHOOK_HOST",
     "ADSGRAM_API_KEY": "ADSGRAM_API_KEY"
   },
+  "build": {
+    "env": {
+      "PYTHON_VERSION": "3.10"
+    },
+    "installCommand": "pip install -r requirements.txt"
+  },
   "crons": [
     {
       "path": "/send-horoscopes",
