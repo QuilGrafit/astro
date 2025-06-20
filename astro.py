@@ -9,6 +9,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.mongodb import MongoStorage
+from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, ReplyKeyboardRemove
 import asyncio
@@ -65,7 +66,7 @@ async def init_mongodb():
 # Инициализация бота и диспетчера
 storage = MongoStorage(mongo_uri=MONGO_URI, database=MONGO_DB_NAME)
 bot = Bot(token=TOKEN)
-dp = Dispatcher(storage=storage)
+dp = Dispatcher(storage=MemoryStorage())
 
 # Состояния для FSM
 class Form(StatesGroup):
