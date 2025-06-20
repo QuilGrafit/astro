@@ -4,4 +4,4 @@ motor
 pymongo
 Flask==3.0.3
 uvicorn
-mongodb
+pymongo
