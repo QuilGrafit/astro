@@ -4,4 +4,3 @@ motor
 pymongo
 Flask
 uvicorn
-MongoStorage
