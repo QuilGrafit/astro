@@ -3,3 +3,4 @@ python-dotenv
 motor
 pymongo
 Flask==3.0.3
+uvicorn
