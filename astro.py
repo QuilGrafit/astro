@@ -92,6 +92,7 @@ class UserState(StatesGroup):
     waiting_for_payment = State()
     waiting_for_adsgram_payment = State()
     waiting_for_ton_payment = State()
+    waiting_for_birth_date = State()
 
 # --- Вспомогательные функции для работы с БД ---
 async def get_user_data(user_id: int):
