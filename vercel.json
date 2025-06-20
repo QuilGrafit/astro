@@ -22,11 +22,11 @@
     }
   ],
   "env": {
-    "BOT_TOKEN": "@bot_token",
-    "TON_WALLET_ADDRESS": "@ton_wallet_address",
-    "MONGO_URI": "@mongo_uri",
-    "WEBHOOK_HOST": "YOUR_VERCEL_APP_DOMAIN",
-    "ADSGRAM_API_KEY": "@adsgram_api_key"
+    "BOT_TOKEN": "BOT_TOKEN",
+    "TON_WALLET_ADDRESS": "TON_WALLET_ADDRESS",
+    "MONGO_URI": "MONGO_URI",
+    "WEBHOOK_HOST": "WEBHOOK_HOST",
+    "ADSGRAM_API_KEY": "ADSGRAM_API_KEY"
   },
   "crons": [
     {
