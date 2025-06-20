@@ -2,14 +2,15 @@
 from aiohttp import web
 
 # Определяем функцию-фабрику, которая будет создавать и возвращать приложение
+# Теперь эта функция и будет нашим ASGI-приложением для Uvicorn
 def create_app():
-    app = web.Application()
+    app_instance = web.Application()
 
     async def handle(request):
         return web.Response(text="Hello from Astro Bot!")
 
-    app.router.add_get('/', handle)
-    return app
+    app_instance.router.add_get('/', handle)
+    return app_instance
 
-# app теперь будет не экземпляром приложения, а функцией-фабрикой
-app = create_app()
+# Uvicorn будет вызывать эту функцию (app) с флагом --factory
+app = create_app
