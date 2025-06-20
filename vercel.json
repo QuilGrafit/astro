@@ -12,7 +12,7 @@
   ],
   "routes": [
     {
-      "src": "/webhook/(.*)",
+      "src": "/api/webhook",
       "dest": "/api/index.py"
     },
     {
