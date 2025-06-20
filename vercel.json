@@ -27,7 +27,6 @@
     },
     "installCommand": "pip install -r requirements.txt"
     }
-  ],
   "env": {
     "BOT_TOKEN": "BOT_TOKEN",
     "TON_WALLET_ADDRESS": "TON_WALLET_ADDRESS",
