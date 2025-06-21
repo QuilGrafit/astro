@@ -4,3 +4,4 @@ motor
 pymongo
 Flask
 uvicorn
+fastapi
