@@ -1,7 +1,13 @@
-from fastapi import FastAPI
+from aiohttp import web
 
-app = FastAPI()
+# Ваши существующие роуты
+routes = web.RouteTableDef()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+@routes.get("/")
+async def handler(request):
+    return web.Response(text="Hello")
+
+def create_app():
+    app = web.Application()
+    app.add_routes(routes)
+    return app
