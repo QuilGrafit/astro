@@ -1,8 +1,6 @@
 services:
   - type: web
-    name: your-bot-service # Название вашего сервиса на Render
+    name: astro
     env: python
-    pythonVersion: 3.9.18 # <-- ДОБАВЬТЕ ЭТУ СТРОКУ (или 3.10.12, или 3.9.18)
     buildCommand: pip install -r requirements.txt
-   #startCommand: uvicorn api.index:app --host 0.0.0.0 --port $PORT
-    # ... остальные настройки, если они есть ...
+    startCommand: python -m aiohttp.web -H 0.0.0.0 -P $PORT api.index:create_app
